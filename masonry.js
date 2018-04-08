@@ -1,9 +1,11 @@
 /*!
- * Masonry v4.2.1
+ * Masonry v4.2.99
+ * [Nexbit Fork]
  * Cascading grid layout library
  * https://masonry.desandro.com
+ * https://github.com/Nexbit/masonry
  * MIT License
- * by David DeSandro
+ * by David DeSandro (repackaged by Paolo Furini)
  */
 
 ( function( window, factory ) {
@@ -24,7 +26,7 @@
     );
   } else {
     // browser global
-    window.Masonry = factory(
+    window.NxMasonry = factory(
       window.Outlayer,
       window.getSize
     );
@@ -37,7 +39,7 @@
 // -------------------------- masonryDefinition -------------------------- //
 
   // create an Outlayer layout class
-  var Masonry = Outlayer.create('masonry');
+  var Masonry = Outlayer.create('nxMasonry');
   // isFitWidth -> fitWidth
   Masonry.compatOptions.fitWidth = 'isFitWidth';
 

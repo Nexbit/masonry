@@ -76,7 +76,7 @@ gulp.task( 'requirejs', function() {
     .pipe( replace( "'masonry/masonry',", '' ) )
     // add banner
     .pipe( addBanner( banner ) )
-    .pipe( rename('masonry.pkgd.js') )
+    .pipe( rename('nx-masonry.pkgd.js') )
     .pipe( gulp.dest('dist') );
 });
 
@@ -87,11 +87,11 @@ var uglify = require('gulp-uglify');
 
 gulp.task( 'uglify', [ 'requirejs' ], function() {
   var banner = getBanner();
-  gulp.src('dist/masonry.pkgd.js')
+  gulp.src('dist/nx-masonry.pkgd.js')
     .pipe( uglify() )
     // add banner
     .pipe( addBanner( banner ) )
-    .pipe( rename('masonry.pkgd.min.js') )
+    .pipe( rename('nx-masonry.pkgd.min.js') )
     .pipe( gulp.dest('dist') );
 });
 
